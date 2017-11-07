@@ -1,0 +1,74 @@
+===========================================================================
+AUTO-COMPLETAR ENDERECOS USANDO AJAX Adaptado por AkiOSk
+-------------              ATENÇÃO               -------------
+------------- TESTADO SOMENTE COM MAGENTO 1.6.X -------------
+-------------              ATENÇÃO               -------------
+CONTATO: AKIO.XD@GMAIL.COM
+===========================================================================
+Changelog:
+Versão 0.2 
+{
+	Corrigido Bug na página do carrinho que quebrava os estilos de css
+}
+
+Versão 0.1 
+{
+	Instrução de instalação: descompacte a pasta ./app na raiz da instalação do magento
+
+	Obs. Caso utilize um tema personaizado copie a pasta app\design\frontend\default\default\template para app\design\frontend\default\"seu tema"\template
+	
+	nota:
+
+	- para melhor uso dos campos endereco, alterar o numero de linhas (padrao 2) para 4 em
+	sistema -> configuracao -> clientes[configuracoes] guia "opcoes de nome e endereco".
+}
+
+===========================================================================
+-------------------- CHANGE LOG ANTIGO, BY MARIO SAM ----------------------
+===========================================================================
+
+AUTO-COMPLETAR ENDERECOS USANDO AJAX
+download em: http://forum.mariosam.com/viewtopic.php?f=6&t=269
+
+===========================================================================
+versao: 0.3.0
+{
+adicionado controle do modulo pelo admin: sistema -> configuracao -> vendas[configuracoes de entrega];
+adicionado opcao de escolha base de consulta (url) locaweb, kinghost, republica digital;
+adicionado opcao de ligar/desligar modulo;
+criado arquivo csv para traducao das palavras personalizadas usadas pelo modulo;
+adicionado campos numero e complemento para endereco (deve ser usado 4 campos no endereco);
+alterado biblioteca de consulta file_get_contents para curl para maior compatibilidade php;
+alterado os arquivos phtml, unificado versoes 1.3 e 1.4 para facilitar instalacao;
+}
+
+versao: 0.0.2
+{
+adicionado validacao de url "https" para corrigir bug de enderecos seguros;
+alterado os arquivos do template "base" para "default";
+movido js do arquivo "optional_zip_countries.phtml" para "onepage.phtml" para compatibilidade com versao 1.3.x;
+}
+
+versao: 0.0.1
+{ 
+alteracao dos campos cep's na tela de cadastro de enderecos;
+consulta via ajax com mensagem de carregando;
+carrega campo estado mesmo com estados no banco de dados;
+limpa os campos da tela a cada nova consulta;
+busca apenas no webservice da republicavirtual; 
+}
+
+===========================================================================
+instalacao:
+
+- mover para a pasta "code/local" os arquivos da pasta "MarioSAM"
+- mover para a pasta "etc/modules" o arquivo "MarioSAM_Enderecos.xml"
+- mover o arquivo CSV para pasta de traducoes app->locale->pt-BR ou en_US
+
+- sobreescrever o arquivo "onepage.phtml" que fica em
+"app/design/frontend/SEU-TEMPLATE/SEU-TEMA/template/checkout"
+
+- sobreescrever os arquivos "billing.phtml" e "shipping.phtml" que ficam em
+"app/design/frontend/SEU-TEMPLATE/SEU-TEMA/template/checkout/onepage"
+
+===========================================================================
